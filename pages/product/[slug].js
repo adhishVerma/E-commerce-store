@@ -9,6 +9,7 @@ import {
 import { Product } from "../../components";
 import { useState } from "react";
 import { useStateContext } from "../../context/StateContext";
+import Head from "next/head";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -22,6 +23,9 @@ const ProductDetails = ({ product, products }) => {
 
   return (
     <div>
+      <Head>
+        <title>{name}</title>
+      </Head>
       <div className="product-detail-container">
         <div>
           <div className="image-container">

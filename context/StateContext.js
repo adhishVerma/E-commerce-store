@@ -1,4 +1,3 @@
-import product from "@/ecommerce/schemas/product";
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
@@ -75,6 +74,19 @@ export const StateContext = ({ children }) => {
       return prevQty - 1;
     });
   };
+
+  useEffect(() => {
+    let userCart = window.localStorage.getItem('USERCART_KICKSD');
+    if(userCart !== null){
+      setCartItems(JSON.parse(userCart).cartItems);
+      setTotalPrice(JSON.parse(userCart).totalPrice);
+      setTotalQuantities(JSON.parse(userCart).totalQuantities);
+    };
+  },[])
+
+  useEffect(() => {
+    window.localStorage.setItem('USERCART_KICKSD',JSON.stringify({cartItems, totalQuantities, totalPrice}));
+  },[cartItems])
 
   return (
     <Context.Provider
