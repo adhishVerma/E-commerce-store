@@ -50,9 +50,18 @@ a {
   left: 0;
   right: 0;
   z-index: 10;
-  max-width: 1478px;
   background-color: white;
   padding: 6px 15px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.7rem;
+  letter-spacing: 1.14px;
+}
+
+.nav-menu-item{
+  cursor: pointer;
 }
 
 .logo {
@@ -236,14 +245,14 @@ span.text-red {
 }
 .desc p {
   color: white;
-  font-weight: 300;
+  font-weight: 400;
   text-align: end;
 }
 .desc h5 {
   margin-bottom: 12px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
-  /* color: black; */
+  color: black;
   align-self: flex-end;
 }
 .products-heading {

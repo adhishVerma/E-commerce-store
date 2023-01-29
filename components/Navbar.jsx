@@ -12,6 +12,12 @@ const Navbar = () => {
         <p className="logo">
           <Link href="/">ssence.com</Link>
         </p>
+        <div className="nav-menu">
+        <div className="nav-menu-item">Men</div>
+        <div className="nav-menu-item">Women</div>
+        <div className="nav-menu-item">Kids</div>
+        <div className="nav-menu-item">Customize</div>
+        </div>
         <button
           type="button"
           className="cart-icon"
