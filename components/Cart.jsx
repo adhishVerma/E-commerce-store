@@ -5,6 +5,7 @@ import {
   AiOutlinePlus,
   AiOutlineLeft,
   AiOutlineShopping,
+  AiOutlineDelete
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
 import { toast } from "react-hot-toast";
@@ -87,7 +88,7 @@ const Cart = () => {
                         <AiOutlinePlus />
                       </span>
                     </p>
-                    <button className="remove-item" onClick={() => {onRemove(item._id)}}><TiDeleteOutline/></button>
+                    <button className="remove-item" onClick={() => {onRemove(item._id)}}><AiOutlineDelete/></button>
                   </div>
                 </div>
               </div>
