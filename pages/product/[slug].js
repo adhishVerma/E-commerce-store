@@ -10,6 +10,7 @@ import { Product } from "../../components";
 import { useState } from "react";
 import { useStateContext } from "../../context/StateContext";
 import Head from "next/head";
+import BreadCrumbs from "@/components/BreadCrumbs";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -26,6 +27,7 @@ const ProductDetails = ({ product, products }) => {
       <Head>
         <title>{name}</title>
       </Head>
+      <BreadCrumbs />
       <div className="product-detail-container">
         <div>
           <div className="image-container">
